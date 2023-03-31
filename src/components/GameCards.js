@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const GameCards = () => {
+const GameCards = () => {
+    const [clickedChar, setClickedChar] = useState([]);
+    const [characters] = useState([{
+        name: "Naruto Uzumaki",
+        img: "naruto.jpg"
+    },
+    {
+        name: "Sasuke Uchiha",
+        img: "sasuke.jpg"
+    },
+    {
+        name: "Sakura Haruno",
+        img: "sakura.jpg"
+    },
+    {
+        name: "Kakashi Hatake",
+        img: "kakashi.jpg"
+    }])
+    
     return (
         <div className="GameCards">
             <div className="Card1"></div>
@@ -37,3 +55,5 @@ export const GameCards = () => {
       </div>
     );
 }
+
+export default GameCards;
