@@ -1,23 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const GameCards = () => {
-    const [clickedChar, setClickedChar] = useState([]);
-    const [characters] = useState([{
-        name: "Naruto Uzumaki",
-        img: "naruto.jpg"
-    },
-    {
-        name: "Sasuke Uchiha",
-        img: "sasuke.jpg"
-    },
-    {
-        name: "Sakura Haruno",
-        img: "sakura.jpg"
-    },
-    {
-        name: "Kakashi Hatake",
-        img: "kakashi.jpg"
-    }])
     
     return (
         <div className="GameCards">
