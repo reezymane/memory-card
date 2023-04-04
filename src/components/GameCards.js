@@ -1,71 +1,121 @@
-import React from "react";
+import React, { useState } from "react";
 import Characters from "./Characters";
 
 const GameCards = () => { 
+    const [displayed, setDisplayed] = useState([]);
+    
     return (
         <div className="GameCards">
             <div className="Card1">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card2">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card3">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card4">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card5">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card6">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
 
             <div className="Card7">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card8">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card9">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card10">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card11">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card12">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card13">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card14">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card15">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       
             <div className="Card16">
-                <Characters />
+                <Characters 
+                  displayed={displayed}
+                  setDisplayed={setDisplayed}
+                />
             </div>
       </div>
     );
