@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Characters from "./Characters";
+import randomArray from "../GameModule";
 
 const GameCards = () => { 
-    const [displayed, setDisplayed] = useState([]);
-
-    useEffect(() => {
-      let randomIndex = Math.floor(Math.random() * (15 - 0 + 1) + 0);
-
-      if (displayed.length < 16) {
-        while (displayed.includes(randomIndex)) {
-         randomIndex = Math.floor(Math.random() * (15 - 0 + 1) + 0); 
-        };
-
-        setDisplayed(displayed => [...displayed, randomIndex])
-      }
-
-      console.log(displayed);
-    }, [displayed])
+    const [displayed, setDisplayed] = useState(randomArray());
     
     return (
         <div className="GameCards">
