@@ -21,67 +21,67 @@ const GameCards = () => {
     return (
         <div className="GameCards">
             <div className="Card1">
-                <Characters />
+                <Characters displayed={displayed[0]}/>
             </div>
 
             <div className="Card2">
-                <Characters />
+                <Characters displayed={displayed[1]}/>
             </div>
 
             <div className="Card3">
-                <Characters />
+                <Characters displayed={displayed[2]}/>
             </div>
 
             <div className="Card4">
-                <Characters />
+                <Characters displayed={displayed[3]}/>
             </div>
 
             <div className="Card5">
-                <Characters />
+                <Characters displayed={displayed[4]}/>
             </div>
 
             <div className="Card6">
-                <Characters />
+                <Characters displayed={displayed[5]}/>
             </div>
 
             <div className="Card7">
-                <Characters />
+                <Characters displayed={displayed[6]}/>
             </div>
       
             <div className="Card8">
-                <Characters />
+                <Characters displayed={displayed[7]}/>
             </div>
       
             <div className="Card9">
-                <Characters />
+                <Characters displayed={displayed[8]}/>
             </div>
       
             <div className="Card10">
-                <Characters />
+                <Characters displayed={displayed[9]}/>
             </div>
       
             <div className="Card11">
-                <Characters />
+                <Characters displayed={displayed[10]}/>
             </div>
       
             <div className="Card12">
-                <Characters />
+                <Characters displayed={displayed[11]}/>
             </div>
       
             <div className="Card13">
-                <Characters />
+                <Characters displayed={displayed[12]}/>
             </div>
       
             <div className="Card14">
-                <Characters />
+                <Characters displayed={displayed[13]}/>
             </div>
       
             <div className="Card15">
-                <Characters />
+                <Characters displayed={displayed[14]}/>
             </div>
       
             <div className="Card16">
-                <Characters />
+                <Characters displayed={displayed[15]}/>
             </div>
       </div>
     );
