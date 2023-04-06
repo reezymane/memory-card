@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {rndInt} from "../GameModule";
 
 const Characters = (props) => {
     const [displayCharacter, setDisplayCharacter] = useState("");
@@ -67,16 +66,6 @@ const Characters = (props) => {
         name: "Orochimaru",
         img: "orochimaru.jpg"
     }]);
-
-    useEffect(() => {
-        let randomIndex = rndInt();
-
-        while (props.displayed.includes(randomIndex)) {
-           randomIndex = rndInt(); 
-        };
-
-
-    }, [])
 
     return (
         <div className="CharacterInfo">
