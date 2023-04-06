@@ -12,7 +12,7 @@ const randomArray = () => {
         initialArray.push(randomIndex);
       }
 
-      console.log(initialArray);
+      return initialArray;
 };
 
 export default randomArray;
