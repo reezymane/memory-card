@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const Characters = (props) => {
-    const [displayCharacter, setDisplayCharacter] = useState("");
     const [characters] = useState([{
         name: "Naruto Uzumaki",
         img: "naruto.jpg"
@@ -69,8 +68,8 @@ const Characters = (props) => {
 
     return (
         <div className="CharacterInfo">
-            <p>Name placeholder</p>
-            <p>Img placeholder</p>
+            <p>{characters[props.displayed].name}</p>
+            <p>{characters[props.displayed].img}</p>
         </div>
     );
 }
