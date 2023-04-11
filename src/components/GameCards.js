@@ -72,16 +72,19 @@ const GameCards = () => {
 
     useEffect(() => {
         
-        const updateScoreOnClick = () => {
+        const characterWasClicked = () => {
             if (true) {
-                console.log(charClicked);
-                
+                setCharClicked(charClicked => [...charClicked, "naruto"]);
             }
         };
 
         document.querySelectorAll(".Card").forEach((card) => {
-            card.addEventListener("click", updateScoreOnClick);
-        })
+            card.addEventListener("click", () => {
+                characterWasClicked();
+
+                console.log(charClicked);
+            });
+        });
         
     }, []);
     
