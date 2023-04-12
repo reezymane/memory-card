@@ -4,7 +4,7 @@ import randomArray from "../GameModule";
 
 const GameCards = () => { 
     const [displayOrder, setDisplayOrder] = useState(randomArray());
-    const [charClicked, setCharClicked] = useState([]);
+    const [charClicked, setCharClicked] = useState(["Naruto Uzumaki"]);
     const [characters] = useState([{
         name: "Naruto Uzumaki",
         img: "naruto.jpg"
@@ -72,17 +72,20 @@ const GameCards = () => {
 
     useEffect(() => {
         
-        const characterWasClicked = (charName) => {
-            if (true) {
-                console.log(charName);
+        const characterPreviouslyClicked = (charName) => {
+            if (!charClicked.includes(charName)) {
+                return false;
             }
+
+            return true;
         };
 
         document.querySelectorAll(".Card").forEach((card) => {
             card.addEventListener("click", () => {
                 const charName = characters[Number(card.dataset.charIndex)].name;
-
-                characterWasClicked(charName);
+                const previouslyClicked = characterPreviouslyClicked(charName);
+                
+                console.log(previouslyClicked);
             });
         });
         
