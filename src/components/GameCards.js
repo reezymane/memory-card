@@ -91,83 +91,67 @@ const GameCards = () => {
     return (
         <div className="GameCards">
             <div className="Card">
-                <p>{characters[displayOrder[0]].name}</p>
-                <p>{characters[displayOrder[0]].img}</p>
+                <Characters character={characters[displayOrder[0]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[1]].name}</p>
-                <p>{characters[displayOrder[1]].img}</p>
+                <Characters character={characters[displayOrder[1]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[2]].name}</p>
-                <p>{characters[displayOrder[2]].img}</p>
+                <Characters character={characters[displayOrder[2]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[3]].name}</p>
-                <p>{characters[displayOrder[3]].img}</p>
+                <Characters character={characters[displayOrder[3]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[4]].name}</p>
-                <p>{characters[displayOrder[4]].img}</p>
+                <Characters character={characters[displayOrder[4]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[5]].name}</p>
-                <p>{characters[displayOrder[5]].img}</p>
+                <Characters character={characters[displayOrder[5]]}/>
             </div>
 
             <div className="Card">
-                <p>{characters[displayOrder[6]].name}</p>
-                <p>{characters[displayOrder[6]].img}</p>
+                <Characters character={characters[displayOrder[6]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[7]].name}</p>
-                <p>{characters[displayOrder[7]].img}</p>
+                <Characters character={characters[displayOrder[7]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[8]].name}</p>
-                <p>{characters[displayOrder[8]].img}</p>
+                <Characters character={characters[displayOrder[8]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[9]].name}</p>
-                <p>{characters[displayOrder[9]].img}</p>
+                <Characters character={characters[displayOrder[9]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[10]].name}</p>
-                <p>{characters[displayOrder[10]].img}</p>
+                <Characters character={characters[displayOrder[10]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[11]].name}</p>
-                <p>{characters[displayOrder[11]].img}</p>
+                <Characters character={characters[displayOrder[11]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[12]].name}</p>
-                <p>{characters[displayOrder[12]].img}</p>
+                <Characters character={characters[displayOrder[12]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[13]].name}</p>
-                <p>{characters[displayOrder[13]].img}</p>
+                <Characters character={characters[displayOrder[13]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[14]].name}</p>
-                <p>{characters[displayOrder[14]].img}</p>
+                <Characters character={characters[displayOrder[14]]}/>
             </div>
       
             <div className="Card">
-                <p>{characters[displayOrder[15]].name}</p>
-                <p>{characters[displayOrder[15]].img}</p>
+                <Characters character={characters[displayOrder[15]]}/>
             </div>
       </div>
     );
