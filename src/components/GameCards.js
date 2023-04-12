@@ -90,67 +90,67 @@ const GameCards = () => {
     
     return (
         <div className="GameCards">
-            <div className="Card">
+            <div className="Card" data-char-index="0">
                 <Characters character={characters[displayOrder[0]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="1">
                 <Characters character={characters[displayOrder[1]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="2">
                 <Characters character={characters[displayOrder[2]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="3">
                 <Characters character={characters[displayOrder[3]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="4">
                 <Characters character={characters[displayOrder[4]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="5">
                 <Characters character={characters[displayOrder[5]]}/>
             </div>
 
-            <div className="Card">
+            <div className="Card" data-char-index="6">
                 <Characters character={characters[displayOrder[6]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="7">
                 <Characters character={characters[displayOrder[7]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="8">
                 <Characters character={characters[displayOrder[8]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="9">
                 <Characters character={characters[displayOrder[9]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="10">
                 <Characters character={characters[displayOrder[10]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="11">
                 <Characters character={characters[displayOrder[11]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="12">
                 <Characters character={characters[displayOrder[12]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="13">
                 <Characters character={characters[displayOrder[13]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="14">
                 <Characters character={characters[displayOrder[14]]}/>
             </div>
       
-            <div className="Card">
+            <div className="Card" data-char-index="15">
                 <Characters character={characters[displayOrder[15]]}/>
             </div>
       </div>
