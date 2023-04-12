@@ -72,17 +72,17 @@ const GameCards = () => {
 
     useEffect(() => {
         
-        const characterWasClicked = () => {
+        const characterWasClicked = (charName) => {
             if (true) {
-                setCharClicked(charClicked => [...charClicked, "naruto"]);
+                console.log(charName);
             }
         };
 
         document.querySelectorAll(".Card").forEach((card) => {
             card.addEventListener("click", () => {
-                characterWasClicked();
+                const charName = characters[Number(card.dataset.charIndex)].name;
 
-                console.log(charClicked);
+                characterWasClicked(charName);
             });
         });
         
@@ -90,67 +90,67 @@ const GameCards = () => {
     
     return (
         <div className="GameCards">
-            <div className="Card" data-char-index="0">
+            <div className="Card" data-char-index={displayOrder[0]}>
                 <Characters character={characters[displayOrder[0]]}/>
             </div>
 
-            <div className="Card" data-char-index="1">
+            <div className="Card" data-char-index={displayOrder[1]}>
                 <Characters character={characters[displayOrder[1]]}/>
             </div>
 
-            <div className="Card" data-char-index="2">
+            <div className="Card" data-char-index={displayOrder[2]}>
                 <Characters character={characters[displayOrder[2]]}/>
             </div>
 
-            <div className="Card" data-char-index="3">
+            <div className="Card" data-char-index={displayOrder[3]}>
                 <Characters character={characters[displayOrder[3]]}/>
             </div>
 
-            <div className="Card" data-char-index="4">
+            <div className="Card" data-char-index={displayOrder[4]}>
                 <Characters character={characters[displayOrder[4]]}/>
             </div>
 
-            <div className="Card" data-char-index="5">
+            <div className="Card" data-char-index={displayOrder[5]}>
                 <Characters character={characters[displayOrder[5]]}/>
             </div>
 
-            <div className="Card" data-char-index="6">
+            <div className="Card" data-char-index={displayOrder[6]}>
                 <Characters character={characters[displayOrder[6]]}/>
             </div>
       
-            <div className="Card" data-char-index="7">
+            <div className="Card" data-char-index={displayOrder[7]}>
                 <Characters character={characters[displayOrder[7]]}/>
             </div>
       
-            <div className="Card" data-char-index="8">
+            <div className="Card" data-char-index={displayOrder[8]}>
                 <Characters character={characters[displayOrder[8]]}/>
             </div>
       
-            <div className="Card" data-char-index="9">
+            <div className="Card" data-char-index={displayOrder[9]}>
                 <Characters character={characters[displayOrder[9]]}/>
             </div>
       
-            <div className="Card" data-char-index="10">
+            <div className="Card" data-char-index={displayOrder[10]}>
                 <Characters character={characters[displayOrder[10]]}/>
             </div>
       
-            <div className="Card" data-char-index="11">
+            <div className="Card" data-char-index={displayOrder[11]}>
                 <Characters character={characters[displayOrder[11]]}/>
             </div>
       
-            <div className="Card" data-char-index="12">
+            <div className="Card" data-char-index={displayOrder[12]}>
                 <Characters character={characters[displayOrder[12]]}/>
             </div>
       
-            <div className="Card" data-char-index="13">
+            <div className="Card" data-char-index={displayOrder[13]}>
                 <Characters character={characters[displayOrder[13]]}/>
             </div>
       
-            <div className="Card" data-char-index="14">
+            <div className="Card" data-char-index={displayOrder[14]}>
                 <Characters character={characters[displayOrder[14]]}/>
             </div>
       
-            <div className="Card" data-char-index="15">
+            <div className="Card" data-char-index={displayOrder[15]}>
                 <Characters character={characters[displayOrder[15]]}/>
             </div>
       </div>
