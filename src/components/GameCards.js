@@ -83,11 +83,17 @@ const GameCards = () => {
             card.addEventListener("click", () => {
                 const charName = characters[Number(card.dataset.charIndex)].name;
                 const previouslyClicked = characterPreviouslyClicked(charName);
+                const prevCharClickedArray = charClicked;
                 
                 if (!previouslyClicked) {
+                    prevCharClickedArray.push(charName)
+
                     setDisplayOrder(randomArray());
+                    setCharClicked(prevCharClickedArray);
+                    console.log(charClicked);
                 } else {
                     console.log("This character was clicked already!");
+                    console.log(charClicked);
                 };
             });
         });
@@ -96,131 +102,67 @@ const GameCards = () => {
     return (
         <div className="GameCards">
             <div className="Card" data-char-index={displayOrder[0]}>
-                <Characters
-                 character={characters[displayOrder[0]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[0]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[1]}>
-                <Characters
-                 character={characters[displayOrder[1]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[1]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[2]}>
-                <Characters
-                 character={characters[displayOrder[2]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[2]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[3]}>
-                <Characters
-                 character={characters[displayOrder[3]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[3]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[4]}>
-                <Characters
-                 character={characters[displayOrder[4]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[4]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[5]}>
-                <Characters
-                 character={characters[displayOrder[5]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[5]]}/>
             </div>
 
             <div className="Card" data-char-index={displayOrder[6]}>
-                <Characters
-                 character={characters[displayOrder[6]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[6]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[7]}>
-                <Characters
-                 character={characters[displayOrder[7]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[7]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[8]}>
-                <Characters
-                 character={characters[displayOrder[8]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[8]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[9]}>
-                <Characters
-                 character={characters[displayOrder[9]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[9]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[10]}>
-                <Characters
-                 character={characters[displayOrder[10]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[10]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[11]}>
-                <Characters
-                 character={characters[displayOrder[11]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[11]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[12]}>
-                <Characters
-                 character={characters[displayOrder[12]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[12]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[13]}>
-                <Characters
-                 character={characters[displayOrder[13]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[13]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[14]}>
-                <Characters
-                 character={characters[displayOrder[14]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[14]]}/>
             </div>
       
             <div className="Card" data-char-index={displayOrder[15]}>
-                <Characters
-                 character={characters[displayOrder[15]]}
-                 charClicked={charClicked}
-                 setCharClicked={setCharClicked}
-                />
+                <Characters character={characters[displayOrder[15]]}/>
             </div>
       </div>
     );
