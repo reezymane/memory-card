@@ -90,8 +90,11 @@ const GameCards = () => {
 
                     setDisplayOrder(randomArray());
                     setCharClicked(prevCharClickedArray);
+
                     console.log(charClicked);
                 } else {
+                    setDisplayOrder(randomArray());
+
                     console.log("This character was clicked already!");
                     console.log(charClicked);
                 };
