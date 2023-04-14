@@ -71,36 +71,21 @@ const GameCards = () => {
     }]);
 
     useEffect(() => {
-        const characterPreviouslyClicked = (charName) => {
-            if (!charClicked.includes(charName)) {
-                return false;
-            }
-
-            return true;
+        const resetDisplay = () => {
+            setDisplayOrder(randomArray());
+            console.log(displayOrder);
         };
 
         document.querySelectorAll(".Card").forEach((card) => {
-            card.addEventListener("click", () => {
-                const charName = characters[Number(card.dataset.charIndex)].name;
-                const previouslyClicked = characterPreviouslyClicked(charName);
-                const prevCharClickedArray = charClicked;
-                
-                if (!previouslyClicked) {
-                    prevCharClickedArray.push(charName)
-
-                    setDisplayOrder(randomArray());
-                    setCharClicked(prevCharClickedArray);
-
-                    console.log(charClicked);
-                } else {
-                    setDisplayOrder(randomArray());
-
-                    console.log("This character was clicked already!");
-                    console.log(charClicked);
-                };
-            });
+            card.addEventListener("click", resetDisplay);
         });
-    }, []);
+
+        return () => {
+            document.querySelectorAll(".Card").forEach((card) => {
+                card.removeEventListener("click", resetDisplay);
+            })
+        }
+    }, [displayOrder]);
     
     return (
         <div className="GameCards">
