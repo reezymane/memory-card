@@ -84,7 +84,7 @@ const GameCards = () => {
             document.querySelectorAll(".Card").forEach((card) => {
                 card.removeEventListener("click", resetDisplay);
             })
-        }
+        };
     }, [displayOrder]);
     
     return (
