@@ -73,16 +73,36 @@ const GameCards = () => {
     useEffect(() => {
         const resetDisplay = () => {
             setDisplayOrder(randomArray());
-            console.log(displayOrder);
         };
 
+        const addClickedChar = (charName) => {
+            setCharClicked(charClicked => [...charClicked, charName])
+        };
+
+        const wasCharClicked = (charIndex) => {
+            if (!charClicked.includes(characters[charIndex].name)) {
+                addClickedChar(characters[charIndex].name);
+                return;
+            }
+
+            console.log("this character was clicked!")
+        };
+
+        const runFuncsOnClick = (event) => {
+            wasCharClicked(event.currentTarget.dataset.charIndex);
+            resetDisplay();
+
+            console.log(displayOrder);
+            console.log(charClicked);
+        }
+
         document.querySelectorAll(".Card").forEach((card) => {
-            card.addEventListener("click", resetDisplay);
+            card.addEventListener("click", runFuncsOnClick);
         });
 
         return () => {
             document.querySelectorAll(".Card").forEach((card) => {
-                card.removeEventListener("click", resetDisplay);
+                card.removeEventListener("click", runFuncsOnClick);
             })
         };
     }, [displayOrder]);
