@@ -4,7 +4,10 @@ import GameCards from "./components/GameCards";
 const App = () => {
   return (
     <div className="App">
-      <header>Naruto Memory Cards!</header>
+      <header>
+        <div className="title">Naruto Memory Cards!</div>
+        
+      </header>
 
       <GameCards />
 
