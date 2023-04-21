@@ -71,6 +71,8 @@ const GameCards = (props) => {
     }]);
 
     useEffect(() => {
+        console.log(charClicked);
+
         const incrementScore = () => {
             props.setCurrentScores(props.currentScore + 1);
         };
@@ -84,7 +86,11 @@ const GameCards = (props) => {
         };
 
         const addClickedChar = (charName) => {
-            setCharClicked(charClicked => [...charClicked, charName])
+            setCharClicked(charClicked => [...charClicked, charName]);
+        };
+
+        const resetClickedChar = () => {
+            setCharClicked([]);
         };
 
         const wasCharClicked = (charIndex) => {
@@ -92,11 +98,11 @@ const GameCards = (props) => {
                 addClickedChar(characters[charIndex].name);
                 incrementScore();
             } else {
+                resetClickedChar();
                 resetScore();
-                console.log("this character was clicked!")
-            }
 
-            
+                console.log("this character was clicked!")
+            };
         };
 
         const runFuncsOnClick = (event) => {
