@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Characters from "./Characters";
 import randomArray from "../GameModule";
 
-const GameCards = () => { 
+const GameCards = (props) => { 
     const [displayOrder, setDisplayOrder] = useState(randomArray());
     const [charClicked, setCharClicked] = useState([]);
     const [characters] = useState([{
@@ -71,6 +71,10 @@ const GameCards = () => {
     }]);
 
     useEffect(() => {
+        const incrementScore = () => {
+            props.setCurrentScores(props.currentScore + 1);
+        };
+
         const resetDisplay = () => {
             setDisplayOrder(randomArray());
         };
@@ -82,10 +86,12 @@ const GameCards = () => {
         const wasCharClicked = (charIndex) => {
             if (!charClicked.includes(characters[charIndex].name)) {
                 addClickedChar(characters[charIndex].name);
-                return;
+                incrementScore();
+            } else {
+                console.log("this character was clicked!")
             }
 
-            console.log("this character was clicked!")
+            
         };
 
         const runFuncsOnClick = (event) => {
@@ -94,6 +100,7 @@ const GameCards = () => {
 
             console.log(displayOrder);
             console.log(charClicked);
+            console.log(props.currentScore);
         }
 
         document.querySelectorAll(".Card").forEach((card) => {
