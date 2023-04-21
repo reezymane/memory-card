@@ -75,6 +75,10 @@ const GameCards = (props) => {
             props.setCurrentScores(props.currentScore + 1);
         };
 
+        const resetScore = () => {
+            props.setCurrentScores(0)
+        };
+
         const resetDisplay = () => {
             setDisplayOrder(randomArray());
         };
@@ -88,6 +92,7 @@ const GameCards = (props) => {
                 addClickedChar(characters[charIndex].name);
                 incrementScore();
             } else {
+                resetScore();
                 console.log("this character was clicked!")
             }
 
@@ -97,10 +102,6 @@ const GameCards = (props) => {
         const runFuncsOnClick = (event) => {
             wasCharClicked(event.currentTarget.dataset.charIndex);
             resetDisplay();
-
-            console.log(displayOrder);
-            console.log(charClicked);
-            console.log(props.currentScore);
         }
 
         document.querySelectorAll(".Card").forEach((card) => {
