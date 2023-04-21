@@ -3,20 +3,26 @@ import GameCards from "./components/GameCards";
 import Scoreboard from "./components/Scoreboard";
 
 const App = () => {
-  const [scores, setScores] = useState({
-      currentScore: 0,
-      bestScore: 0
-    });
+  const [currentScore, setCurrentScores] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   
   return (
     <div className="App">
       <header>
         <div className="title">Naruto Memory Cards!</div>
 
-        <Scoreboard scores={scores}/>
+        <Scoreboard
+         currentScore={currentScore}
+         bestScore={bestScore}
+        />
       </header>
 
-      <GameCards setScores={setScores}/>
+      <GameCards
+       currentScore={currentScore}
+       setCurrentScores={setCurrentScores}
+       bestScore={bestScore}
+       setBestScore={setBestScore}
+      />
 
       <footer>Copyright <span>&copy;</span> ReezyTech</footer>
     </div>
