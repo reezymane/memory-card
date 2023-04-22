@@ -71,14 +71,18 @@ const GameCards = (props) => {
     }]);
 
     useEffect(() => {
-        console.log(charClicked);
-
         const incrementScore = () => {
             props.setCurrentScores(props.currentScore + 1);
         };
 
         const resetScore = () => {
             props.setCurrentScores(0)
+        };
+
+        const checkBestScore = () => {
+            if (props.currentScore > props.bestScore) {
+                props.setBestScore(props.currentScore);
+            };
         };
 
         const resetDisplay = () => {
@@ -98,6 +102,7 @@ const GameCards = (props) => {
                 addClickedChar(characters[charIndex].name);
                 incrementScore();
             } else {
+                checkBestScore();
                 resetClickedChar();
                 resetScore();
 
