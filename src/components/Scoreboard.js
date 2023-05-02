@@ -1,10 +1,11 @@
 import React from "react";
+import '../styles/Scoreboard.css'
 
 const Scoreboard = (props) => {
     return (
         <div className="Scoreboard">
-            <p>Score: {props.currentScore}</p>
-            <p>Best Score: {props.bestScore}</p>
+            <div>Score: {props.currentScore}</div>
+            <div>Best Score: {props.bestScore}</div>
         </div>
     );
 };
