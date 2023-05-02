@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GameCards from "./components/GameCards";
 import Scoreboard from "./components/Scoreboard";
+import './styles/App.css'
 
 const App = () => {
   const [currentScore, setCurrentScores] = useState(0);
