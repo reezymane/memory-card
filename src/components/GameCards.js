@@ -106,8 +106,6 @@ const GameCards = (props) => {
                 checkBestScore();
                 resetClickedChar();
                 resetScore();
-
-                console.log("this character was clicked!")
             };
         };
 
