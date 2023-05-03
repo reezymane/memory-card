@@ -12,18 +12,23 @@ const App = () => {
       <header>
         <div className="title">Naruto Memory Cards!</div>
 
+        <div className="GameDetails">Get points by clicking on an image but don't click on any more than once!</div>
+
         <Scoreboard
          currentScore={currentScore}
          bestScore={bestScore}
         />
       </header>
 
-      <GameCards
-       currentScore={currentScore}
-       setCurrentScores={setCurrentScores}
-       bestScore={bestScore}
-       setBestScore={setBestScore}
-      />
+      <div className="MainContainer">
+        <GameCards
+         currentScore={currentScore}
+         setCurrentScores={setCurrentScores}
+         bestScore={bestScore}
+         setBestScore={setBestScore}
+        />
+      </div>
+      
 
       <footer>Copyright <span>&copy;</span> ReezyTech</footer>
     </div>
