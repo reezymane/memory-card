@@ -3,8 +3,8 @@ import React from "react";
 const Characters = (props) => {
     return (
         <div className="CharacterInfo">
-            <p>{props.character.name}</p>
-            <p>{props.character.img}</p>
+            <div className="CharName">{props.character.img}</div>
+            <div className="CharImg">{props.character.name}</div>
         </div>
     );
 }
