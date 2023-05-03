@@ -1,5 +1,5 @@
 header {
-    background-color: rgba(0, 70, 0, 0.893);
+    background-color: rgba(0, 70, 1, 0.949);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,10 +26,12 @@ header {
 }
 
 footer {
-    background-color: rgba(0, 70, 0, 0.893);
+    background-color: rgba(0, 70, 1, 0.949);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    gap: 5px;
+    height: 80px;
     border-radius: 40% 40% 0 0;
+    font-size: 20px;
 }
