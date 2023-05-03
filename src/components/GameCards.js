@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Characters from "./Characters";
 import randomArray from "../GameModule";
+import "../styles/GameCards.css";
 
 const GameCards = (props) => { 
     const [displayOrder, setDisplayOrder] = useState(randomArray());

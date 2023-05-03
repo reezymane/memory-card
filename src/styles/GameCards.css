@@ -1,0 +1,14 @@
+.GameCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 300px);
+    gap: 15px;
+    margin: 15px 0;
+    width: 1200px;
+}
+
+.Card {
+    background-color: rgba(0, 70, 0, 0.893);
+    border-radius: 5%;
+    padding: 15px 20px;
+}
