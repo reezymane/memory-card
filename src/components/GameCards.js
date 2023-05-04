@@ -1,6 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Characters from "./Characters";
 import randomArray from "../GameModule";
+import naruto from "../assets/naruto.jpeg";
+import sasuke from "../assets/sasuke.webp";
+import sakura from "../assets/sakura.jpg";
+import kakashi from "../assets/kakashi.webp";
+import shikamaru from "../assets/shikamaru.webp";
+import might from "../assets/guy.webp";
+import rock from "../assets/rock.webp";
+import neji from "../assets/neji.webp";
+import hinata from "../assets/hinata.jpeg";
+import gaara from "../assets/gaara.jpeg";
+import jiraiya from "../assets/jiraiya.webp";
+import kisame from "../assets/kisame.jpeg";
+import itachi from "../assets/itachi.jpeg";
+import minato from "../assets/minato.webp";
+import madara from "../assets/madara.webp";
+import orochimaru from "../assets/orochimaru.webp";
 import "../styles/GameCards.css";
 
 const GameCards = (props) => { 
@@ -8,67 +24,67 @@ const GameCards = (props) => {
     const [charClicked, setCharClicked] = useState([]);
     const [characters] = useState([{
         name: "Naruto Uzumaki",
-        img: "naruto.jpg"
+        img: naruto
     },
     {
         name: "Sasuke Uchiha",
-        img: "sasuke.jpg"
+        img: sasuke
     },
     {
         name: "Sakura Haruno",
-        img: "sakura.jpg"
+        img: sakura
     },
     {
         name: "Kakashi Hatake",
-        img: "kakashi.jpg"
+        img: kakashi
     },
     {
         name: "Shikamaru Nara",
-        img: "shikamaru.jpg"
+        img: shikamaru
     },
     {
         name: "Might Guy",
-        img: "might.jpg"
+        img: might
     },
     {
         name: "Rock Lee",
-        img: "rock.jpg"
+        img: rock
     },
     {
         name: "Neji Hyuga",
-        img: "neji.jpg"
+        img: neji
     },
     {
         name: "Hinata Hyuga",
-        img: "hinata.jpg"
+        img: hinata
     },
     {
         name: "Gaara",
-        img: "gaara.jpg"
+        img: gaara
     },
     {
         name: "Jiraiya",
-        img: "jiraiya.jpg"
+        img: jiraiya
     },
     {
         name: "Kisame Hoshigaki",
-        img: "kisame.jpg"
+        img: kisame
     },
     {
         name: "Itachi Uchiha",
-        img: "itachi.jpg"
+        img: itachi
     },
     {
         name: "Minato Namikaze",
-        img: "minato.jpg"
+        img: minato
     },
     {
         name: "Madara Uchiha",
-        img: "madara.jpg"
+        img: madara
     },
     {
         name: "Orochimaru",
-        img: "orochimaru.jpg"
+        img: orochimaru
     }]);
 
     useEffect(() => {
