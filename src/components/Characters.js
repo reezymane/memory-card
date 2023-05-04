@@ -4,7 +4,7 @@ import "../styles/Characters.css";
 const Characters = (props) => {
     return (
         <div className="CharacterInfo">
-            <div className="CharImg">{props.character.img}</div>
+            <img src={props.character.img} alt="character"/>
             <div className="CharName">{props.character.name}</div>
         </div>
     );
